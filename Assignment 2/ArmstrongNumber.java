@@ -11,12 +11,13 @@ public class ArmstrongNumber {
 
         System.out.print("Enter a number : ");
         num = input.nextInt();
+        int n = Integer.toString(num).length();
 
         int palinum = 0, opernum = num;
 
         while (opernum != 0) {
 
-            palinum += Math.pow((opernum % 10), 3);
+            palinum += Math.pow((opernum % 10), n);
             opernum /= 10;
         }
 
