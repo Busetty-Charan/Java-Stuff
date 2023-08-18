@@ -37,8 +37,6 @@ class Book {
         System.out.print("Enter the price : ");
 
         price = input.nextInt();
-
-        input.close();
     }
 
     public void printDetails() {
@@ -51,9 +49,9 @@ class Book {
 }
 
 public class BookDemo {
-    
+
     public static void main(String[] args) {
-        
+
         Book obj1 = new Book(), obj2 = new Book("X743YYG", "Caramelldansen", "VeryPogPerson", 7000000);
 
         obj1.getDetails();
