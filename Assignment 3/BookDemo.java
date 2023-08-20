@@ -6,8 +6,6 @@ class Book {
     private int price;
 
     public Book() {
-
-        ;
     }
 
     public Book(String id, String tlt, String atr, int prc) {
@@ -52,11 +50,13 @@ public class BookDemo {
 
     public static void main(String[] args) {
 
-        Book obj1 = new Book(), obj2 = new Book("X743YYG", "Caramelldansen", "VeryPogPerson", 7000000);
+        Book obj1 = new Book(), obj2 = new Book();
 
         obj1.getDetails();
         System.out.println();
         obj1.printDetails();
+        System.out.println();
+        obj2.getDetails();
         System.out.println();
         obj2.printDetails();
     }
