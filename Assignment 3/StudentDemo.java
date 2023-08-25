@@ -1,12 +1,15 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class Student {
+class Student {
 
-    int marks[] = new int[5], total, average;
-    String regNo, name;
+    private int marks[] = new int[5];
+    private int total;
+    private int average;
+    private String regNo;
+    private String name;
 
-    void getDetails() {
+    public void getDetails() {
 
         Scanner input = new Scanner(System.in);
 
@@ -29,7 +32,7 @@ public class Student {
         average = total / 5;
     }
 
-    void printDetails() {
+    public void printDetails() {
 
         System.out.println("Name : " + name);
         System.out.println("Register Number : " + regNo);
@@ -37,7 +40,9 @@ public class Student {
         System.out.println("Total : " + total);
         System.out.println("Average : " + average);
     }
+}
 
+public class StudentDemo {
     public static void main(String[] args) {
 
         Student stu = new Student();

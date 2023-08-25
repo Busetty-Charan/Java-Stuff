@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 class Book {
 
-    private String bookId, title, author;
+    private String bookId;
+    private String title;
+    private String author;
     private int price;
 
     public Book() {
@@ -50,7 +52,8 @@ public class BookDemo {
 
     public static void main(String[] args) {
 
-        Book obj1 = new Book(), obj2 = new Book();
+        Book obj1 = new Book();
+        Book obj2 = new Book();
 
         obj1.getDetails();
         System.out.println();

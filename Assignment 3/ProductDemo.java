@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
-public class Product {
+class Product {
 
-    private String pid, prodName;
+    private String pid;
+    private String prodName;
     private double price;
 
     Product() {
 
     }
 
-    void getDetails() {
+    public void getDetails() {
 
         Scanner input = new Scanner(System.in);
 
@@ -26,18 +27,20 @@ public class Product {
         price = input.nextDouble();
     }
 
-    void displayDetails() {
+    public void displayDetails() {
 
         System.out.println("Product ID : " + pid);
         System.out.println("Name : " + prodName);
         System.out.println("Price : " + price);
     }
 
-    int compare(Product comprod) {
+    public int compare(Product comprod) {
 
         return (price > comprod.price) ? 1 : (price == comprod.price) ? 0 : -1;
     }
-    
+}
+
+public class ProductDemo {
     public static void main(String[] args) {
         
         Product prod1 = new Product();

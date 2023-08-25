@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
-public class Employee {
+class Employee {
 
-    private String empID, empName;
-    private double basicSalary, grossSalary;
+    private String empID;
+    private String empName;
+    private double basicSalary;
+    private double grossSalary;
 
-    Employee() {
+    public Employee() {
         empID = "";
         empName = "";
         basicSalary = 0;
         grossSalary = 0;
     }
 
-    void getDetails() {
+    public void getDetails() {
 
         Scanner input = new Scanner(System.in);
 
@@ -29,20 +31,23 @@ public class Employee {
         basicSalary = input.nextDouble();
     }
 
-    void calcSalary() {
+    public void calcSalary() {
 
         grossSalary = basicSalary <= 10000 ? (basicSalary + (0.2 * basicSalary) + (0.8 * basicSalary))
                 : basicSalary <= 20000 ? (basicSalary + (0.25 * basicSalary) + (0.9 * basicSalary))
                         : basicSalary > 20000 ? (basicSalary + (0.3 * basicSalary) + (0.95 * basicSalary)) : 0;
     }
 
-    void displayDetails() {
+    public void displayDetails() {
 
         System.out.println("Employee ID : " + empID);
         System.out.println("Name : " + empName);
         System.out.println("Basic Salary : " + basicSalary);
         System.out.println("Gross Salary : " + grossSalary);
     }
+}
+
+public class EmployeeDemo {
 
     public static void main(String[] args) {
 

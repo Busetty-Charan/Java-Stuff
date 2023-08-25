@@ -3,7 +3,8 @@ import java.lang.Math;
 
 class Point {
 
-    private int x, y;
+    private int x;
+    private int y;
 
     public Point() {
 
@@ -17,7 +18,7 @@ class Point {
         y = y_val;
     }
 
-    void getValues() {
+    public void getValues() {
 
         Scanner input = new Scanner(System.in);
 
@@ -30,12 +31,12 @@ class Point {
         y = input.nextInt();
     }
 
-    void displayValues() {
+    public void displayValues() {
 
         System.out.println("( " + x + ", " + y + " )");
     }
 
-    double findDistance(Point point) {
+    public double findDistance(Point point) {
 
         return (Math.pow(Math.pow((x - point.x), 2) + Math.pow((y - point.y), 2), 0.5));
     }
@@ -45,7 +46,8 @@ public class PointDemo {
 
     public static void main(String[] args) {
 
-        Point p1 = new Point(3, 5), p2 = new Point();
+        Point p1 = new Point(3, 5);
+        Point p2 = new Point();
 
         p2.getValues();
         System.out.println("The distance b/w p1 and p2 is " + p1.findDistance(p2));
