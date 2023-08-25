@@ -2,24 +2,24 @@ class Rational {
 
     private double numerator, denominator;
 
-    Rational() {
+    public Rational() {
 
         numerator = 0;
         denominator = 1;
     }
 
-    Rational(double num, double den) {
+    public Rational(double num, double den) {
 
         numerator = num;
         denominator = den;
     }
 
-    void display() {
+    public void display() {
 
         System.out.println(numerator + " / " + denominator);
     }
 
-    Rational simplify(double numer, double denomer) {
+    private Rational simplify(double numer, double denomer) {
 
         double num = numer, den = denomer;
 
@@ -36,7 +36,7 @@ class Rational {
         return new Rational(numer, denomer);
     }
 
-    Rational add(Rational number) {
+    public Rational add(Rational number) {
 
         double tempnum, tempden;
 
@@ -46,7 +46,7 @@ class Rational {
         return simplify(tempnum, tempden);
     }
 
-    Rational sub(Rational number) {
+    public Rational sub(Rational number) {
 
         double tempnum, tempden;
 
@@ -56,7 +56,7 @@ class Rational {
         return simplify(tempnum, tempden);
     }
 
-    Rational mul(Rational number) {
+    public Rational mul(Rational number) {
 
         double tempnum, tempden;
 
@@ -66,7 +66,7 @@ class Rational {
         return simplify(tempnum, tempden);
     }
 
-    Rational div(Rational number) {
+    public Rational div(Rational number) {
 
         double tempnum, tempden;
 

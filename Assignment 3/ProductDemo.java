@@ -6,7 +6,7 @@ class Product {
     private String prodName;
     private double price;
 
-    Product() {
+    public Product() {
 
     }
 
